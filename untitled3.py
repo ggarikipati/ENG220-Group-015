@@ -41,14 +41,20 @@ if uploaded_file is not None:
         if graph_type == "Line":
             ax.plot(data[x_column], data[y_column], marker='o')
             ax.set_title(f"{y_column} vs {x_column} (Line Plot)")
+            # Rotate X-axis labels
+            plt.xticks(rotation=90)
 
         elif graph_type == "Scatter":
             ax.scatter(data[x_column], data[y_column])
             ax.set_title(f"{y_column} vs {x_column} (Scatter Plot)")
+            # Rotate X-axis labels
+            plt.xticks(rotation=90)
 
         elif graph_type == "Bar":
             ax.bar(data[x_column], data[y_column])
             ax.set_title(f"{y_column} vs {x_column} (Bar Chart)")
+            # Rotate X-axis labels
+            plt.xticks(rotation=90)
 
         elif graph_type == "Pie":
             # Pie chart only makes sense for single-column data
