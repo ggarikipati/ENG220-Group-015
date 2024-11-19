@@ -42,7 +42,7 @@ if uploaded_file is not None:
             ax.plot(data[x_column], data[y_column], marker='o')
             ax.set_title(f"{y_column} vs {x_column} (Line Plot)")
             # Rotate X-axis labels
-            plt.xticks(rotation=90
+            plt.xticks(rotation=90)
             y_min, y_max = data[y_column].min(), data[y_column].max()
             ax.set_ylim(y_min, y_max)  # Scale Y-axis from lowest to highest value
 
