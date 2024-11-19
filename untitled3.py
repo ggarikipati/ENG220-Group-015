@@ -55,7 +55,10 @@ if uploaded_file is not None:
             ax.set_title(f"{y_column} vs {x_column} (Bar Chart)")
             # Rotate X-axis labels
             plt.xticks(rotation=90)
-
+            
+        y_min, y_max = data[y_column].min(), data[y_column].max()
+        ax.set_ylim(y_min, y_max)  # Scale Y-axis from lowest to highest value
+     
         elif graph_type == "Pie":
             # Pie chart only makes sense for single-column data
             if len(data[x_column].unique()) <= 10:  # Limit to 10 unique categories for readability
