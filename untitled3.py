@@ -60,7 +60,7 @@ if uploaded_file is not None:
 
         elif graph_type == "Pie":
             # Aggregate data for meaningful pie chart
-            if len(data[x_column].unique()) <= 10:  # Limit unique categories
+            if len(data[x_column].unique()) <= 35:  # Limit unique categories
                 pie_data = data.groupby(x_column)[y_column].sum()
                 plt.pie(
                     pie_data,
