@@ -5,12 +5,10 @@ import matplotlib.pyplot as plt
 # Title of the app
 st.title("CSV Data Visualization App")
 
-# File uploader for CSV
-uploaded_file = st.file_uploader("Upload your CSV file", type=["csv"])
+# Load data directly from file
+data = pd.read_csv('./HealthData.csv') 
 
-if uploaded_file is not None:
-    # Read the CSV file
-    data = pd.read_csv(uploaded_file)
+if data is not None:
     st.write("### Data Preview")
     st.dataframe(data)
 
